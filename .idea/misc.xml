@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/victo/AndroidStudioProjects/AP4/app/src/main/res/layout/activity_event.xml" value="0.2734375" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/AP4/app/src/main/res/layout/activity_insc_eleve.xml" value="0.2734375" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/AP4/app/src/main/res/layout/activity_insc_prof.xml" value="0.2734375" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/AP4/app/src/main/res/layout/activity_login.xml" value="0.2734375" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/AP4/app/src/main/res/layout/activity_main.xml" value="0.2734375" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/AP4/app/src/main/res/layout/color_spinner_layout.xml" value="0.2734375" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/AP4/app/src/main/res/layout/ligne_btn_event.xml" value="0.2734375" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/AP4/app/src/main/res/layout/ligne_eleve.xml" value="0.2734375" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/AP4/app/src/main/res/layout/ligne_guest.xml" value="0.2734375" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/AP4/app/src/main/res/layout/ligne_prof.xml" value="0.2734375" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/AP4/app/src/main/res/layout/spinner_dropdown_layout.xml" value="0.2734375" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/AP4/app/src/main/res/menu/menugeneral.xml" value="0.2734375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

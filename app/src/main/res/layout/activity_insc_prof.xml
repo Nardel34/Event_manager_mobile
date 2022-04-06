@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".InscProfActivity">
+
+    <TextView
+        android:id="@+id/TXTtitleInscProf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/TXTtitleInscProf"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="140dp"
+        android:contentDescription="@string/SCROLLinscription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TXTtitleInscProf">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/TXTinscProfEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginEnd="90dp"
+                android:gravity="center"
+                android:text="@string/TXTVadresseEmail"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/INSCprofEmail"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal|center"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/PLACEHOLDadresseEmail"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hintText"
+                android:textColorLink="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/TXTinscProfPasswd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="90dp"
+                android:gravity="center"
+                android:text="@string/TXTVpasswd"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/INSCprofPasswd"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal|center"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/PLACEHOLDpasswd"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hintText"
+                android:textColorLink="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/TXTinscProfConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="105dp"
+                android:gravity="center"
+                android:text="@string/TXTVconfirmPasswd"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/INSCprofConfirm"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal|center"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/PLACEHOLDconfirm"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hintText"
+                android:textColorLink="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/TXTinscProfNom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="120dp"
+                android:gravity="center"
+                android:text="@string/TXTVnom"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/INSCprofNom"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal|center"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/PLACEHOLDnom"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hintText"
+                android:textColorLink="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/TXTinscProfPrenom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="110dp"
+                android:gravity="center"
+                android:text="@string/TXTVprenom"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/INSCprofPrenom"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal|center"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/PLACEHOLDprenom"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hintText"
+                android:textColorLink="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/TXTinscProfAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="120dp"
+                android:gravity="center"
+                android:text="@string/TXTVage"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/INSCprofAge"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal|center"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/PLACEHOLDage"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hintText"
+                android:textColorLink="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/TXTinscProfExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="100dp"
+                android:gravity="center"
+                android:text="@string/TXTVexp"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/INSCprofExp"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal|center"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/PLACEHOLDexp"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hintText"
+                android:textColorLink="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/TXTinscProfDiplome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="100dp"
+                android:gravity="center"
+                android:text="@string/TXTVdiplome"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/INSCprofDiplome"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginBottom="40dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/PLACEHOLDdiplome"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hintText"
+                android:textColorLink="#FFFFFF" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
