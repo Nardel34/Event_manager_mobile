@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg"
     tools:context=".LoginActivity">
 
   <TextView
+      android:id="@+id/SignUpEleve"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="21dp"
+      android:text="@string/TXThpeleve"
+      android:textColor="@color/bluehp"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/SignUpProf" />
+
+  <TextView
+      android:id="@+id/noAccount"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:text="@string/TXThpSignup"
+      android:textColor="@color/white"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/BTNconnexion" />
+
+  <TextView
       android:id="@+id/TXTVcours2"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="150dp"
+      android:layout_marginTop="70dp"
       android:text="@string/TXTtitleConnexion"
       android:textColor="@color/white"
       android:textSize="30sp"
@@ -24,15 +48,15 @@
 
   <EditText
       android:id="@+id/LOGINadresseEmail"
-      android:textColorHint="@color/hintText"
-      android:textColor="@color/white"
-      android:backgroundTint="@color/white"
       android:layout_width="300dp"
       android:layout_height="50dp"
       android:layout_marginTop="70dp"
+      android:backgroundTint="@color/white"
       android:ems="10"
       android:hint="@string/PLACEHOLDadresseEmail"
       android:inputType="textEmailAddress"
+      android:textColor="@color/white"
+      android:textColorHint="@color/hintText"
       android:textColorLink="#FFFFFF"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.5"
@@ -41,15 +65,15 @@
 
   <EditText
       android:id="@+id/LOGINpasswd"
-      android:textColorHint="@color/hintText"
-      android:textColor="@color/white"
-      android:backgroundTint="@color/white"
       android:layout_width="300dp"
       android:layout_height="50dp"
       android:layout_marginTop="50dp"
+      android:backgroundTint="@color/white"
       android:ems="10"
       android:hint="@string/PLACEHOLDpasswd"
       android:inputType="textPassword"
+      android:textColor="@color/white"
+      android:textColorHint="@color/hintText"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.5"
       app:layout_constraintStart_toStartOf="parent"
@@ -81,4 +105,29 @@
       app:layout_constraintHorizontal_bias="0.5"
       app:layout_constraintStart_toStartOf="parent" />
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <Button
+      android:id="@+id/BTNconnexion"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="25dp"
+      android:background="@color/btn"
+      android:text="@string/TXTtitleConnexion"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/LOGINpasswd" />
+
+  <TextView
+      android:id="@+id/SignUpProf"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="18dp"
+      android:text="@string/TXThpprof"
+      android:textColor="@color/bluehp"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/noAccount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

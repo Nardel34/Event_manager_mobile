@@ -1,12 +1,13 @@
 package Entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Type {
     private String id;
     private String nomType;
     private String description;
-    private List<String> evenements;
+    private ArrayList<String> evenements = new ArrayList<>();
 
     public String getId(){
         return id;
@@ -27,5 +28,14 @@ public class Type {
     }
     public void setDescription(String description){
         this.description = description;
+    }
+
+    public ArrayList<String> getEvenements(){
+        return evenements;
+    }
+    public void addEvenement(String evenement){
+        //if (evenement != ""){
+            this.evenements.add(evenement);
+        //}
     }
 }

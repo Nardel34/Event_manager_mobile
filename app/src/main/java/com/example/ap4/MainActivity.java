@@ -61,8 +61,16 @@ public class MainActivity extends AppCompatActivity {
                             JSONArray listTypeJson = response.getJSONArray("hydra:member");
                             for (int i = 0; i < listTypeJson.length(); i++){
                                 JSONObject typeJson = listTypeJson.getJSONObject(i);
-
                                 Type type = new Type();
+
+                                JSONArray listEventByTypeJson = typeJson.getJSONArray("evenements");
+                                if (listEventByTypeJson.length() > 0) {
+                                    for (int j = 0; j < listEventByTypeJson.length(); j++) {
+                                        Log.i("NNNNNNNNNNNN", listEventByTypeJson.getString(j));
+                                        type.addEvenement(listEventByTypeJson.getString(j));
+                                    }
+                                }
+
                                 type.setId(typeJson.getString("id"));
                                 type.setNomType(typeJson.getString("nomType"));
                                 type.setDescription(typeJson.getString("description"));

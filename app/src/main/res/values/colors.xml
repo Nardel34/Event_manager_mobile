@@ -11,4 +11,5 @@
     <color name="bg">#383838</color>
     <color name="btn">#5c1c1c</color>
     <color name="hintText">#cccccc</color>
+    <color name="bluehp">#344CFF</color>
 </resources>

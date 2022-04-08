@@ -34,5 +34,8 @@
     <string name="PLACEHOLDdiplome">Entrez votre diplôme (Facultatif)</string>
     <string name="TXTVabonnement">Choisir un abonnement :</string>
     <string name="TXTanime">Animé par :</string>
-    <string name="TXTle">Le</string>
+    <string name="TXTle">Date :</string>
+    <string name="TXThpSignup">Pas de compte ?</string>
+    <string name="TXThpprof">Sign up Prof</string>
+    <string name="TXThpeleve">Sign up Elève</string>
 </resources>

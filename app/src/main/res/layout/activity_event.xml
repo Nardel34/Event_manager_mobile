@@ -22,9 +22,9 @@
 
     <ScrollView
         android:layout_width="409dp"
-        android:layout_height="589dp"
+        android:layout_height="609dp"
         android:layout_marginTop="50dp"
-        android:contentDescription="@string/TXTtitleConcerto"
+        android:contentDescription="@string/SCROLLinscription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,14 +32,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="769dp"
+            android:orientation="vertical" >
 
             <ListView
                 android:id="@+id/listEvent"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
+                android:layout_height="400dp" />
         </LinearLayout>
     </ScrollView>
 

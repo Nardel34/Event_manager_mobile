@@ -48,6 +48,8 @@ public class TypeAdapter extends ArrayAdapter {
                 Intent intent = new Intent(getContext(), EventActivity.class);
                 intent.putExtra("idType", type.getId());
                 intent.putExtra("nomType", type.getNomtype());
+                intent.putStringArrayListExtra("evenements", type.getEvenements());
+
                 getContext().startActivity(intent);
             }
         });
