@@ -32,10 +32,24 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        SignUpEleve.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InscEleveActivity.class);
+                startActivity(intent);
+            }
+        });
+
         input_Email = (EditText) findViewById(R.id.LOGINadresseEmail);
         input_Passwd = (EditText) findViewById(R.id.LOGINpasswd);
         login = (Button) findViewById(R.id.BTNconnexion);
 
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
     }
 }

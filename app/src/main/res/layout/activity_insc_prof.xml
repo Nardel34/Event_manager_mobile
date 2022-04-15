@@ -236,6 +236,14 @@
                 android:textColor="@color/white"
                 android:textColorHint="@color/hintText"
                 android:textColorLink="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnInscriptionProf"
+                android:layout_marginBottom="40dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:text="@string/TXTbtnInscription" />
         </LinearLayout>
     </ScrollView>
 
