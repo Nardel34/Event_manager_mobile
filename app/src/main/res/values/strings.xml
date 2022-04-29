@@ -39,4 +39,7 @@
     <string name="TXThpprof">Sign up Prof</string>
     <string name="TXThpeleve">Sign up Elève</string>
     <string name="TXTbtnInscription">S\'inscrire</string>
+    <string name="TXTBTNlogout">Log out</string>
+    <string name="TXTVtype">Type :</string>
+    <string name="TXTVlieu">Lieu :</string>
 </resources>

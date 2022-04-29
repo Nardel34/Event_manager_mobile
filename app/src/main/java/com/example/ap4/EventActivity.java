@@ -30,7 +30,7 @@ public class EventActivity extends AppCompatActivity {
 
     private final String urlListeEventById = "http://10.0.2.2:8000";
     private ArrayList<String> routesIdEvent;
-    private String Lieu = "";
+    private String Lieu = "http://10.0.2.2:8000";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +62,6 @@ public class EventActivity extends AppCompatActivity {
                                 //JSONArray listEventJson = response.getJSONArray("hydra:member");
                                 //JSONObject eventJson = listEventJson.getJSONObject(i);                                    JSONObject eventJson = listEventJson.getJSONObject(i);
                                 JSONObject eventJson = response;
-
 
                                 Evenement event = new Evenement();
                                 event.setDateEvent(eventJson.getString("dateEvent"));

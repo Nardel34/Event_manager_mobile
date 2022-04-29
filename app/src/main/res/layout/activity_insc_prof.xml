@@ -131,7 +131,7 @@
                 android:backgroundTint="@color/white"
                 android:ems="10"
                 android:hint="@string/PLACEHOLDnom"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:textColor="@color/white"
                 android:textColorHint="@color/hintText"
                 android:textColorLink="#FFFFFF" />
@@ -156,7 +156,7 @@
                 android:backgroundTint="@color/white"
                 android:ems="10"
                 android:hint="@string/PLACEHOLDprenom"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:textColor="@color/white"
                 android:textColorHint="@color/hintText"
                 android:textColorLink="#FFFFFF" />
@@ -181,7 +181,7 @@
                 android:backgroundTint="@color/white"
                 android:ems="10"
                 android:hint="@string/PLACEHOLDage"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:textColor="@color/white"
                 android:textColorHint="@color/hintText"
                 android:textColorLink="#FFFFFF" />
@@ -206,7 +206,7 @@
                 android:backgroundTint="@color/white"
                 android:ems="10"
                 android:hint="@string/PLACEHOLDexp"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:textColor="@color/white"
                 android:textColorHint="@color/hintText"
                 android:textColorLink="#FFFFFF" />
@@ -232,7 +232,7 @@
                 android:backgroundTint="@color/white"
                 android:ems="10"
                 android:hint="@string/PLACEHOLDdiplome"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:textColor="@color/white"
                 android:textColorHint="@color/hintText"
                 android:textColorLink="#FFFFFF" />
