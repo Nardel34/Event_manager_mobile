@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="tarifSpinnerValues">
-        <item>-- Choisir un tarif --</item>
         <item>14 - 18 ans, 500€</item>
         <item>18 - 25 ans, 1000€</item>
+    </string-array>
+
+    <string-array name="size_values">
+        <item>9</item>
+        <item>10</item>
     </string-array>
 </resources>

@@ -64,6 +64,8 @@ public class InscProfActivity extends AppCompatActivity {
                         json.put("age", age.getText().toString().trim());
                         json.put("expPro", exp.getText().toString().trim());
                         json.put("diplome", diplome.getText().toString().trim());
+                        json.put("roles", new JSONArray(new String[]{"ROLE_PROF"}));
+
                         //params.put("DateEntree", new Date().toString());
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -75,7 +77,10 @@ public class InscProfActivity extends AppCompatActivity {
                             new Response.Listener<JSONObject>() {
                                 @Override
                                 public void onResponse(JSONObject response) {
-                                    Toast.makeText(getApplicationContext(), "C'est good", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), "Inscription réussite", Toast.LENGTH_LONG).show();
+
+                                    Intent intent = new Intent(InscProfActivity.this, LoginActivity.class);
+                                    startActivity(intent);
                                 }
                             }, new Response.ErrorListener() {
                         @Override
