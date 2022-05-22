@@ -10,4 +10,8 @@
     <item
         android:id="@+id/MenuSignupEleve"
         android:title="@string/TXTBTNMenuInscEleve" />
+    <item
+        android:id="@+id/Menulogout"
+        android:title="@string/TXTBTNlogout"
+        android:visible="false"/>
 </menu>

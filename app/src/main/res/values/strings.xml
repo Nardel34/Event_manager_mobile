@@ -42,4 +42,5 @@
     <string name="TXTBTNlogout">Log out</string>
     <string name="TXTVtype">Type :</string>
     <string name="TXTVlieu">Lieu :</string>
+    <string name="TXTBTNsub">reg</string>
 </resources>

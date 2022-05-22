@@ -29,6 +29,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
 
+import Adapter.EventEleveAdapter;
 import Adapter.EventLogAdapter;
 import Adapter.TypeAdapter;
 import Entity.Evenement;
@@ -38,13 +39,25 @@ public class MainActivity extends AppCompatActivity {
 
     private final String urlListeType = "http://10.0.2.2:8000/api/types?page=1";
     private final String urlListeEventById = "http://10.0.2.2:8000/api/eventuser/";
-
+    private final String urlListeRegisterById = "http://10.0.2.2:8000/api/registration/";
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
         MenuInflater inflate = getMenuInflater();
         inflate.inflate(R.menu.menugeneral, menu);
+
+        MenuItem itemLogout = menu.findItem(R.id.Menulogout);
+        MenuItem itemLogin = menu.findItem(R.id.MenuConnexion);
+        MenuItem itemProf = menu.findItem(R.id.MenuSignupProf);
+        MenuItem itemEleve = menu.findItem(R.id.MenuSignupEleve);
+
+        if (this.getIntent().getStringExtra("nom") != null) {
+            itemLogout.setVisible(true);
+            itemLogin.setVisible(false);
+            itemProf.setVisible(false);
+            itemEleve.setVisible(false);
+        }
 
         return true;
     }
@@ -61,51 +74,98 @@ public class MainActivity extends AppCompatActivity {
 
         if(this.getIntent().getStringExtra("nom") != null){
             TXTVlogInfo.setText(this.getIntent().getStringExtra("nom"));
-            TXTVcours.setText("tableau de bord");
+            TXTVcours.setText("Tableau de bord");
 
-            EventLogAdapter eventLogAdapter = new EventLogAdapter(this, R.layout.ligne_prof);
+            if(this.getIntent().getStringExtra("roles").equals("[\"ROLE_PROF\",\"ROLE_USER\"]")){
+                EventLogAdapter eventLogAdapter = new EventLogAdapter(this, R.layout.ligne_prof);
 
-            final RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
-                    Request.Method.GET,
-                    urlListeEventById + this.getIntent().getStringExtra("id"),
-                    null,
-                    new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            try {
+                final RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
+                        Request.Method.GET,
+                        urlListeEventById + this.getIntent().getStringExtra("id"),
+                        null,
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                try {
 
-                                JSONArray events = response.getJSONArray("events");
-                                for (int i = 0; i < events.length(); i++) {
-                                    JSONObject eventJson = events.getJSONObject(i);
-                                    
-                                    Evenement event = new Evenement();
-                                    
-                                    event.setDateEvent(eventJson.getString("date"));
-                                    event.setLieu(eventJson.getString("lieu"));
-                                    event.setType(eventJson.getString("type"));
+                                    JSONArray events = response.getJSONArray("events");
+                                    for (int i = 0; i < events.length(); i++) {
+                                        JSONObject eventJson = events.getJSONObject(i);
 
-                                    Log.i("lieu", event.getLieu());
-                                    Log.i("date", event.getType());
-                                    Log.i("type", event.getDateEvent());
-                                    
-                                    eventLogAdapter.add(event);
+                                        Evenement event = new Evenement();
+
+                                        event.setDateEvent(eventJson.getString("date"));
+                                        event.setLieu(eventJson.getString("lieu"));
+                                        event.setType(eventJson.getString("type"));
+
+                                        Log.i("lieu", event.getLieu());
+                                        Log.i("date", event.getType());
+                                        Log.i("type", event.getDateEvent());
+
+                                        eventLogAdapter.add(event);
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
                                 }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
+                            }
+                        },
+                        new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError e) {
+                                Log.i("ErrorResponseConnection", e.getMessage());
+                                Toast.makeText(getApplicationContext(), "Une erreur est survenue", Toast.LENGTH_LONG).show();
                             }
                         }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError e) {
-                            Log.i("ErrorResponseConnection", e.getMessage());
-                            Toast.makeText(getApplicationContext(), "Une erreur est survenue", Toast.LENGTH_LONG).show();
+                );
+                requestQueue.add(jsonObjectRequest);
+                listType.setAdapter(eventLogAdapter);
+
+            } else if(this.getIntent().getStringExtra("roles").equals("[\"ROLE_ELEVE\",\"ROLE_USER\"]")) {
+                EventEleveAdapter eventEleveAdapter = new EventEleveAdapter(this, R.layout.ligne_eleve);
+
+                final RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
+                        Request.Method.GET,
+                        urlListeRegisterById + this.getIntent().getStringExtra("id"),
+                        null,
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                try {
+
+                                    JSONArray events = response.getJSONArray("events");
+                                    for (int i = 0; i < events.length(); i++) {
+                                        JSONObject eventJson = events.getJSONObject(i);
+
+                                        Evenement event = new Evenement();
+
+                                        event.setDateEvent(eventJson.getString("date"));
+                                        event.setLieu(eventJson.getString("lieu"));
+                                        event.setType(eventJson.getString("type"));
+
+                                        Log.i("lieu", event.getLieu());
+                                        Log.i("date", event.getType());
+                                        Log.i("type", event.getDateEvent());
+
+                                        eventEleveAdapter.add(event);
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        },
+                        new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError e) {
+                                Log.i("ErrorResponseConnection", e.getMessage());
+                                Toast.makeText(getApplicationContext(), "Une erreur est survenue", Toast.LENGTH_LONG).show();
+                            }
                         }
-                    }
-            );
-            requestQueue.add(jsonObjectRequest);
-            listType.setAdapter(eventLogAdapter);
+                );
+                requestQueue.add(jsonObjectRequest);
+                listType.setAdapter(eventEleveAdapter);
+            }
 
         } else {
             TypeAdapter typeAdapter = new TypeAdapter(this, R.layout.ligne_btn_event);
@@ -157,7 +217,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     public boolean onOptionsItemSelected(MenuItem item)
     {
         // Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
@@ -176,6 +235,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.MenuSignupEleve:
                 Intent intentEleve = new Intent(MainActivity.this, InscEleveActivity.class);
                 startActivity(intentEleve);
+                return true;
+
+            case R.id.Menulogout:
+                Intent intentLogout = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intentLogout);
                 return true;
         }
 

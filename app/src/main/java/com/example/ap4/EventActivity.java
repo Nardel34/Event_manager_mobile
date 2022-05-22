@@ -60,7 +60,7 @@ public class EventActivity extends AppCompatActivity {
                         public void onResponse(JSONObject response) {
                             try {
                                 //JSONArray listEventJson = response.getJSONArray("hydra:member");
-                                //JSONObject eventJson = listEventJson.getJSONObject(i);                                    JSONObject eventJson = listEventJson.getJSONObject(i);
+                                //JSONObject eventJson = listEventJson.getJSONObject(i);
                                 JSONObject eventJson = response;
 
                                 Evenement event = new Evenement();
